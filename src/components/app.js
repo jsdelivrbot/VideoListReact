@@ -12,10 +12,9 @@ export default class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { videos: '' };
+        this.state = { videos: [] };
 
         YTSearch({ key: API_KEY, term: 'basketball'}, (videos) => {
-            //this.setState({ videos: videos });
             this.setState({ videos });
         });
     }
